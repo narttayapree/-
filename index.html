@@ -12,174 +12,28 @@
 
   <title>ระบบจัดการผ่อนสินค้าและเงินยืม</title>
 
+  <!-- เชื่อมไฟล์รูปแบบเว็บไซต์ -->
   <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- =========================================================
-     APP
-     ========================================================= -->
+  <!-- =====================================================
+       ส่วนหัวเว็บไซต์
+       ===================================================== -->
 
-<div id="app">
+  <header class="header">
 
+    <div class="header-container">
 
-  <!-- =======================================================
-       1. LOGIN
-       ======================================================= -->
+      <div class="logo-area">
 
-  <section id="page-login" class="page login-page">
-
-    <div class="login-decoration decoration-1"></div>
-    <div class="login-decoration decoration-2"></div>
-    <div class="login-decoration decoration-3"></div>
-
-    <div class="login-wrapper">
-
-      <!-- ภาพผู้หญิง -->
-
-      <div class="login-character">
-
-        <div class="character-hair"></div>
-
-        <div class="character-face">
-
-          <div class="eye eye-left"></div>
-          <div class="eye eye-right"></div>
-
-          <div class="character-mouth"></div>
-
+        <div class="logo">
+          ผ
         </div>
 
-        <div class="character-body"></div>
-
-      </div>
-
-
-      <div class="login-card">
-
-        <div class="login-logo">
-          <span class="logo-heart">♡</span>
-        </div>
-
-        <h1>
-          Installation
-          <br>
-          Management System
-        </h1>
-
-        <p class="login-subtitle">
-          ระบบจัดการผ่อนสินค้าและเงินยืม
-        </p>
-
-
-        <div class="login-form">
-
-          <label>
-            ชื่อผู้ใช้งาน
-          </label>
-
-          <div class="input-with-icon">
-
-            <span class="field-icon">
-              <svg viewBox="0 0 24 24">
-                <circle cx="12" cy="8" r="4"></circle>
-                <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path>
-              </svg>
-            </span>
-
-            <input
-              id="loginName"
-              type="text"
-              placeholder="กรอกชื่อผู้ใช้งาน"
-            >
-
-          </div>
-
-
-          <label>
-            รหัสผ่าน
-          </label>
-
-          <div class="input-with-icon">
-
-            <span class="field-icon">
-              <svg viewBox="0 0 24 24">
-                <rect x="5" y="10" width="14" height="10" rx="2"></rect>
-                <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
-              </svg>
-            </span>
-
-            <input
-              id="loginPassword"
-              type="password"
-              placeholder="กรอกรหัสผ่าน"
-            >
-
-          </div>
-
-
-          <button
-            type="button"
-            class="pink-button login-button"
-            onclick="เข้าสู่ระบบ()"
-          >
-            เข้าสู่ระบบ
-          </button>
-
-
-          <div class="login-bottom">
-
-            <label class="remember-box">
-
-              <input type="checkbox">
-
-              <span>
-                จำฉันไว้
-              </span>
-
-            </label>
-
-            <button
-              type="button"
-              class="link-button"
-            >
-              ลืมรหัสผ่าน?
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =======================================================
-       MAIN SYSTEM
-       ======================================================= -->
-
-  <div id="mainSystem" class="system hidden">
-
-
-    <!-- =====================================================
-         TOP HEADER
-         ===================================================== -->
-
-    <header class="top-header">
-
-      <div class="brand">
-
-        <div class="brand-logo">
-          ♡
-        </div>
-
-        <div>
+        <div class="logo-text">
 
           <h1>
             ระบบจัดการผ่อนสินค้าและเงินยืม
@@ -194,2259 +48,674 @@
       </div>
 
 
-      <div class="header-user">
+      <!-- ข้อมูลผู้ใช้งาน -->
+      <div class="user-area">
 
-        <div class="notification">
+        <div class="user-info">
 
-          <svg viewBox="0 0 24 24">
-            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
-            <path d="M10 21h4"></path>
-          </svg>
-
-        </div>
-
-        <div class="header-user-text">
-
-          <strong id="headerUserName">
+          <p class="user-name">
             กำลังตรวจสอบผู้ใช้งาน
-          </strong>
+          </p>
 
-          <small id="headerUserRole">
+          <p class="user-role">
             กรุณารอสักครู่
-          </small>
+          </p>
 
         </div>
 
-        <div class="header-avatar">
-          👩🏻
+        <div class="user-avatar">
+          ผ
         </div>
 
       </div>
 
-    </header>
+    </div>
+
+  </header>
 
 
+  <!-- =====================================================
+       โครงสร้างหลัก
+       ===================================================== -->
 
-    <div class="system-layout">
+  <div class="layout">
 
 
-      <!-- ===================================================
-           SIDEBAR
-           =================================================== -->
+    <!-- ===================================================
+         เมนูด้านซ้าย
+         =================================================== -->
 
-      <aside class="sidebar">
+    <aside class="sidebar">
 
-        <div class="sidebar-label">
-          เมนูหลัก
+      <div class="sidebar-title">
+        เมนูหลัก
+      </div>
+
+
+      <nav class="menu">
+
+        <a
+          href="#"
+          class="menu-item active"
+        >
+
+          <span class="menu-icon">
+            🏠
+          </span>
+
+          <span>
+            หน้าแรก
+          </span>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="menu-item"
+        >
+
+          <span class="menu-icon">
+            📦
+          </span>
+
+          <span>
+            รายการผ่อน
+          </span>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="menu-item"
+        >
+
+          <span class="menu-icon">
+            💰
+          </span>
+
+          <span>
+            รายการเงินยืม
+          </span>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="menu-item"
+        >
+
+          <span class="menu-icon">
+            📅
+          </span>
+
+          <span>
+            งวดชำระ
+          </span>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="menu-item"
+        >
+
+          <span class="menu-icon">
+            💳
+          </span>
+
+          <span>
+            การชำระเงิน
+          </span>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="menu-item"
+        >
+
+          <span class="menu-icon">
+            👤
+          </span>
+
+          <span>
+            ข้อมูลของฉัน
+          </span>
+
+        </a>
+
+      </nav>
+
+
+      <!-- เมนูเจ้าของระบบ -->
+      <div class="sidebar-title" style="margin-top: 25px;">
+        เจ้าของระบบ
+      </div>
+
+
+      <nav class="menu">
+
+        <a
+          href="#"
+          class="menu-item owner-only"
+        >
+
+          <span class="menu-icon">
+            👑
+          </span>
+
+          <span>
+            จัดการระบบ
+          </span>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="menu-item owner-only"
+        >
+
+          <span class="menu-icon">
+            👥
+          </span>
+
+          <span>
+            ผู้ใช้งานทั้งหมด
+          </span>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="menu-item owner-only"
+        >
+
+          <span class="menu-icon">
+            📊
+          </span>
+
+          <span>
+            รายงาน
+          </span>
+
+        </a>
+
+      </nav>
+
+    </aside>
+
+
+    <!-- ===================================================
+         เนื้อหาหลัก
+         =================================================== -->
+
+    <main class="main">
+
+
+      <!-- หัวข้อหน้า -->
+
+      <section class="page-header">
+
+        <h2>
+          หน้าแรก
+        </h2>
+
+        <p>
+          ภาพรวมรายการผ่อนและเงินยืมของคุณ
+        </p>
+
+      </section>
+
+
+      <!-- =================================================
+           แจ้งสถานะระบบ
+           ================================================= -->
+
+      <div class="alert alert-info">
+
+        ระบบกำลังเชื่อมต่อกับข้อมูล
+        กรุณารอสักครู่
+
+      </div>
+
+
+      <!-- =================================================
+           การ์ดสรุปข้อมูล
+           ================================================= -->
+
+      <section class="summary-grid">
+
+
+        <!-- รายการผ่อน -->
+
+        <div class="summary-card">
+
+          <p class="summary-label">
+            รายการผ่อน
+          </p>
+
+          <p class="summary-value">
+            0
+          </p>
+
+          <p class="summary-detail">
+            รายการ
+          </p>
+
         </div>
 
 
-        <button
-          class="sidebar-item active"
-          onclick="เปิดหน้า('dashboard')"
-        >
+        <!-- เงินยืม -->
 
-          <span class="side-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M3 11l9-8 9 8"></path>
-              <path d="M5 10v10h14V10"></path>
-            </svg>
-          </span>
+        <div class="summary-card">
 
-          <span>หน้าหลัก</span>
+          <p class="summary-label">
+            รายการเงินยืม
+          </p>
 
-        </button>
+          <p class="summary-value">
+            0
+          </p>
 
+          <p class="summary-detail">
+            รายการ
+          </p>
 
-        <button
-          class="sidebar-item"
-          onclick="เปิดหน้า('my-items')"
-        >
-
-          <span class="side-icon">
-            <svg viewBox="0 0 24 24">
-              <rect x="4" y="5" width="16" height="15" rx="2"></rect>
-              <path d="M8 3v4M16 3v4M4 10h16"></path>
-            </svg>
-          </span>
-
-          <span>รายการของฉัน</span>
-
-        </button>
-
-
-        <button
-          class="sidebar-item"
-          onclick="เปิดหน้า('product-form')"
-        >
-
-          <span class="side-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M4 7l8-4 8 4v10l-8 4-8-4z"></path>
-              <path d="M4 7l8 4 8-4M12 11v10"></path>
-            </svg>
-          </span>
-
-          <span>ผ่อนสินค้า</span>
-
-        </button>
-
-
-        <button
-          class="sidebar-item"
-          onclick="เปิดหน้า('loan-form')"
-        >
-
-          <span class="side-icon">
-            <svg viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="8"></circle>
-              <path d="M12 7v10M9 9h4a2 2 0 0 1 0 4H9a2 2 0 0 0 0 4h5"></path>
-            </svg>
-          </span>
-
-          <span>เงินยืม</span>
-
-        </button>
-
-
-        <button
-          class="sidebar-item"
-          onclick="เปิดหน้า('payment-history')"
-        >
-
-          <span class="side-icon">
-            <svg viewBox="0 0 24 24">
-              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-              <path d="M3 10h18"></path>
-              <path d="M7 15h4"></path>
-            </svg>
-          </span>
-
-          <span>ประวัติการจ่าย</span>
-
-        </button>
-
-
-        <button
-          class="sidebar-item"
-          onclick="เปิดหน้า('notifications')"
-        >
-
-          <span class="side-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
-              <path d="M10 21h4"></path>
-            </svg>
-          </span>
-
-          <span>แจ้งเตือน</span>
-
-        </button>
-
-
-        <button
-          class="sidebar-item"
-          onclick="เปิดหน้า('settings')"
-        >
-
-          <span class="side-icon">
-            <svg viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M19 12a7 7 0 0 0-.2-1.6l2-1.5-2-3.4-2.4 1a8 8 0 0 0-2.7-1.6L13.5 2h-3l-.4 2.9A8 8 0 0 0 7.4 6.5L5 5.5l-2 3.4 2 1.5A7 7 0 0 0 4.8 12c0 .5.1 1.1.2 1.6l-2 1.5 2 3.4 2.4-1a8 8 0 0 0 2.7 1.6l.4 2.9h3l.4-2.9a8 8 0 0 0 2.7-1.6l2.4 1 2-3.4-2-1.5c.1-.5.2-1 .2-1.6z"></path>
-            </svg>
-          </span>
-
-          <span>ตั้งค่าบัญชี</span>
-
-        </button>
-
-
-        <div class="sidebar-label admin-label">
-          เจ้าของระบบ
         </div>
 
 
-        <button
-          class="sidebar-item admin-item"
-          onclick="เปิดหน้า('admin-dashboard')"
-        >
+        <!-- งวดที่รอชำระ -->
 
-          <span class="side-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M4 19V5h16v14z"></path>
-              <path d="M8 16v-5M12 16V8M16 16v-7"></path>
-            </svg>
-          </span>
+        <div class="summary-card">
 
-          <span>ภาพรวมทั้งหมด</span>
+          <p class="summary-label">
+            งวดที่รอชำระ
+          </p>
 
-        </button>
+          <p class="summary-value">
+            0
+          </p>
 
+          <p class="summary-detail">
+            งวด
+          </p>
 
-        <button
-          class="sidebar-item admin-item"
-          onclick="เปิดหน้า('admin-monthly')"
-        >
+        </div>
 
-          <span class="side-icon">
-            <svg viewBox="0 0 24 24">
-              <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-              <path d="M3 9h18M8 4v5M16 4v5"></path>
-            </svg>
-          </span>
 
-          <span>สรุปรายเดือน</span>
+        <!-- ยอดคงเหลือ -->
 
-        </button>
+        <div class="summary-card">
 
+          <p class="summary-label">
+            ยอดคงเหลือ
+          </p>
 
-        <button
-          class="sidebar-item admin-item"
-          onclick="เปิดหน้า('admin-users')"
-        >
+          <p class="summary-value">
+            0 บาท
+          </p>
 
-          <span class="side-icon">
-            <svg viewBox="0 0 24 24">
-              <circle cx="9" cy="8" r="3"></circle>
-              <path d="M3 20c0-4 2-6 6-6s6 2 6 6"></path>
-              <path d="M17 11c2-1 4 0 4 3M17 17c2 0 4 1 4 3"></path>
-            </svg>
-          </span>
+          <p class="summary-detail">
+            ยอดที่ยังต้องชำระ
+          </p>
 
-          <span>รายชื่อผู้ใช้</span>
+        </div>
 
-        </button>
+      </section>
 
 
-        <button
-          class="sidebar-item logout-item"
-          onclick="ออกจากระบบ()"
-        >
+      <!-- =================================================
+           งวดที่กำลังจะถึง
+           ================================================= -->
 
-          <span class="side-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M10 5H5v14h5"></path>
-              <path d="M14 8l4 4-4 4M8 12h10"></path>
-            </svg>
-          </span>
+      <section class="card">
 
-          <span>ออกจากระบบ</span>
+        <div class="card-header">
 
-        </button>
+          <div>
 
-      </aside>
-
-
-
-      <!-- ===================================================
-           CONTENT
-           =================================================== -->
-
-      <main class="content">
-
-
-        <!-- =================================================
-             2. USER DASHBOARD
-             ================================================= -->
-
-        <section
-          id="view-dashboard"
-          class="view active-view"
-        >
-
-          <div class="welcome-row">
-
-            <div>
-
-              <p class="hello">
-                สวัสดีค่ะ 👋
-              </p>
-
-              <h2>
-                ยินดีต้อนรับกลับมา
-              </h2>
-
-              <p>
-                นี่คือภาพรวมรายการผ่อนสินค้าและเงินยืมของคุณ
-              </p>
-
-            </div>
-
-            <div class="dashboard-character">
-
-              <div class="mini-woman-head"></div>
-
-              <div class="mini-woman-body"></div>
-
-            </div>
-
-          </div>
-
-
-          <!-- ยอดที่ต้องจ่าย -->
-
-          <div class="due-banner">
-
-            <div class="due-icon">
-
-              <svg viewBox="0 0 24 24">
-                <path d="M4 8h16v11H4z"></path>
-                <path d="M7 8V6a5 5 0 0 1 10 0v2"></path>
-                <path d="M9 13h6"></path>
-              </svg>
-
-            </div>
-
-            <div class="due-info">
-
-              <span>
-                ยอดที่ต้องจ่ายเดือนนี้
-              </span>
-
-              <strong>
-                1,850 บาท
-              </strong>
-
-            </div>
-
-            <div class="due-action">
-
-              <span>
-                เดือนปัจจุบัน
-                <br>
-                ตุลาคม 2569
-              </span>
-
-              <button
-                onclick="เปิดหน้า('payment-history')"
-              >
-                ดูรายละเอียด →
-              </button>
-
-            </div>
-
-          </div>
-
-
-          <!-- summary -->
-
-          <div class="quick-summary">
-
-            <div class="quick-card product-card">
-
-              <div class="quick-icon">
-
-                <svg viewBox="0 0 24 24">
-                  <path d="M4 7l8-4 8 4v10l-8 4-8-4z"></path>
-                  <path d="M4 7l8 4 8-4M12 11v10"></path>
-                </svg>
-
-              </div>
-
-              <div>
-
-                <span>
-                  ผ่อนสินค้า
-                </span>
-
-                <strong>
-                  1,250 บาท
-                </strong>
-
-                <small>
-                  3 รายการ
-                </small>
-
-              </div>
-
-              <button onclick="เปิดหน้า('my-items')">
-                ›
-              </button>
-
-            </div>
-
-
-            <div class="quick-card loan-card">
-
-              <div class="quick-icon">
-
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="8"></circle>
-                  <path d="M12 7v10M9 9h4a2 2 0 0 1 0 4H9a2 2 0 0 0 0 4h5"></path>
-                </svg>
-
-              </div>
-
-              <div>
-
-                <span>
-                  เงินยืม
-                </span>
-
-                <strong>
-                  600 บาท
-                </strong>
-
-                <small>
-                  2 รายการ
-                </small>
-
-              </div>
-
-              <button onclick="เปิดหน้า('my-items')">
-                ›
-              </button>
-
-            </div>
-
-          </div>
-
-
-          <!-- upcoming -->
-
-          <div class="panel">
-
-            <div class="panel-heading">
-
-              <div>
-
-                <h3>
-                  รายการใกล้ครบกำหนด
-                </h3>
-
-                <p>
-                  รายการที่กำลังจะถึงกำหนดชำระ
-                </p>
-
-              </div>
-
-              <button class="text-button">
-                ดูทั้งหมด →
-              </button>
-
-            </div>
-
-
-            <div class="table-wrapper">
-
-              <table>
-
-                <thead>
-
-                  <tr>
-                    <th>รายการ</th>
-                    <th>ประเภท</th>
-                    <th>ค่างวด (บาท)</th>
-                    <th>เหลือ (งวด)</th>
-                    <th>วันครบกำหนด</th>
-                  </tr>
-
-                </thead>
-
-                <tbody>
-
-                  <tr>
-
-                    <td>
-                      <div class="table-product">
-                        <div class="tiny-product pink-product">
-                          ♡
-                        </div>
-                        Solomon ที่นอนพ็อกเก็ตสปริง
-                      </div>
-                    </td>
-
-                    <td>
-                      <span class="tag tag-pink">
-                        ผ่อนสินค้า
-                      </span>
-                    </td>
-
-                    <td>
-                      502.80
-                    </td>
-
-                    <td>
-                      4/5
-                    </td>
-
-                    <td>
-                      มี.ค. 2570
-                    </td>
-
-                  </tr>
-
-
-                  <tr>
-
-                    <td>
-                      <div class="table-product">
-                        <div class="tiny-product blue-product">
-                          $
-                        </div>
-                        ค่าเดินทาง
-                      </div>
-                    </td>
-
-                    <td>
-                      <span class="tag tag-blue">
-                        เงินยืม
-                      </span>
-                    </td>
-
-                    <td>
-                      500.00
-                    </td>
-
-                    <td>
-                      2/3
-                    </td>
-
-                    <td>
-                      พ.ย. 2569
-                    </td>
-
-                  </tr>
-
-                </tbody>
-
-              </table>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             3. SELECT TYPE
-             ================================================= -->
-
-        <section
-          id="view-add-type"
-          class="view"
-        >
-
-          <div class="section-title">
-
-            <div>
-
-              <span class="back-link">
-                ← กลับ
-              </span>
-
-              <h2>
-                เพิ่มรายการใหม่
-              </h2>
-
-              <p>
-                เลือกประเภทที่ต้องการเพิ่มรายการค่ะ
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="type-grid">
-
-
-            <button
-              class="type-card type-product"
-              onclick="เปิดหน้า('product-form')"
-            >
-
-              <div class="type-icon">
-
-                <svg viewBox="0 0 24 24">
-                  <path d="M3 6h18l-2 11H5z"></path>
-                  <path d="M8 6l2-3h4l2 3"></path>
-                  <circle cx="9" cy="20" r="1"></circle>
-                  <circle cx="17" cy="20" r="1"></circle>
-                </svg>
-
-              </div>
-
-              <h3>
-                ผ่อนสินค้า
-              </h3>
-
-              <p>
-                เช่น ที่นอน โทรศัพท์
-                เสื้อผ้า เครื่องใช้ไฟฟ้า
-                และอื่น ๆ
-              </p>
-
-              <span class="type-arrow">
-                →
-              </span>
-
-            </button>
-
-
-            <button
-              class="type-card type-loan"
-              onclick="เปิดหน้า('loan-form')"
-            >
-
-              <div class="type-icon">
-
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="8"></circle>
-                  <path d="M12 7v10M9 9h4a2 2 0 0 1 0 4H9a2 2 0 0 0 0 4h5"></path>
-                </svg>
-
-              </div>
-
-              <h3>
-                เงินยืม
-              </h3>
-
-              <p>
-                เช่น ค่าเดินทาง
-                ค่าใช้จ่ายส่วนตัว
-                ค่ากินขนม และอื่น ๆ
-              </p>
-
-              <span class="type-arrow">
-                →
-              </span>
-
-            </button>
-
-          </div>
-
-
-          <div class="cute-note">
-
-            <div class="note-character">
-              👩🏻
-            </div>
-
-            <div>
-              <strong>
-                เลือกประเภทที่ต้องการ
-              </strong>
-              <br>
-              เพื่อเพิ่มรายการค่ะ
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             4. PRODUCT FORM
-             ================================================= -->
-
-        <section
-          id="view-product-form"
-          class="view"
-        >
-
-          <div class="form-page-header">
-
-            <button
-              class="back-button"
-              onclick="เปิดหน้า('add-type')"
-            >
-              ← กลับ
-            </button>
-
-            <h2>
-              เพิ่มรายการผ่อนสินค้า
-            </h2>
-
-            <div class="form-header-icon">
-              ♡
-            </div>
-
-          </div>
-
-
-          <div class="form-panel">
-
-            <div class="form-field full">
-
-              <label>
-                รายการสินค้า <b>*</b>
-              </label>
-
-              <input
-                type="text"
-                placeholder="เช่น Solomon ที่นอนพ็อกเก็ตสปริง"
-              >
-
-            </div>
-
-
-            <div class="form-row">
-
-              <div class="form-field">
-
-                <label>
-                  วันที่สั่งซื้อ <b>*</b>
-                </label>
-
-                <input
-                  type="date"
-                  value="2026-10-11"
-                >
-
-              </div>
-
-
-              <div class="form-field">
-
-                <label>
-                  จำนวนเงินต่อเดือน <b>*</b>
-                </label>
-
-                <div class="money-input">
-
-                  <input
-                    type="number"
-                    value="502.80"
-                  >
-
-                  <span>
-                    บาท
-                  </span>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="form-row">
-
-              <div class="form-field">
-
-                <label>
-                  จำนวนเดือน <b>*</b>
-                </label>
-
-                <div class="money-input">
-
-                  <input
-                    type="number"
-                    value="5"
-                  >
-
-                  <span>
-                    เดือน
-                  </span>
-
-                </div>
-
-              </div>
-
-
-              <div class="form-field">
-
-                <label>
-                  วันที่เริ่มผ่อน <b>*</b>
-                </label>
-
-                <input
-                  type="date"
-                  value="2026-11-01"
-                >
-
-              </div>
-
-            </div>
-
-
-            <div class="calculated-box">
-
-              <span>
-                วันครบกำหนดงวดสุดท้าย
-                (ระบบคำนวณอัตโนมัติ)
-              </span>
-
-              <strong>
-                มีนาคม 2570
-              </strong>
-
-            </div>
-
-
-            <div class="form-actions">
-
-              <button class="outline-button">
-                ยกเลิก
-              </button>
-
-              <button class="pink-button">
-                บันทึกรายการ
-              </button>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             5. LOAN FORM
-             ================================================= -->
-
-        <section
-          id="view-loan-form"
-          class="view"
-        >
-
-          <div class="form-page-header">
-
-            <button
-              class="back-button"
-              onclick="เปิดหน้า('add-type')"
-            >
-              ← กลับ
-            </button>
-
-            <h2>
-              เพิ่มรายการเงินยืม
-            </h2>
-
-            <div class="form-header-icon loan-symbol">
-              $
-            </div>
-
-          </div>
-
-
-          <div class="form-panel">
-
-            <div class="form-row">
-
-              <div class="form-field">
-
-                <label>
-                  จำนวนเงินทั้งหมด <b>*</b>
-                </label>
-
-                <div class="money-input">
-
-                  <input
-                    type="number"
-                    value="3000"
-                  >
-
-                  <span>
-                    บาท
-                  </span>
-
-                </div>
-
-              </div>
-
-
-              <div class="form-field">
-
-                <label>
-                  ยืมไปทำอะไร <b>*</b>
-                </label>
-
-                <input
-                  type="text"
-                  value="ค่าใช้จ่ายส่วนตัว"
-                >
-
-              </div>
-
-            </div>
-
-
-            <div class="form-row">
-
-              <div class="form-field">
-
-                <label>
-                  วันที่ยืม <b>*</b>
-                </label>
-
-                <input
-                  type="date"
-                  value="2026-09-30"
-                >
-
-              </div>
-
-
-              <div class="form-field">
-
-                <label>
-                  จำนวนเดือน <b>*</b>
-                </label>
-
-                <div class="money-input">
-
-                  <input
-                    type="number"
-                    value="3"
-                  >
-
-                  <span>
-                    เดือน
-                  </span>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="form-field">
-
-              <label>
-                ต้องจ่ายต่อเดือน
-                <small>
-                  (ระบบคำนวณอัตโนมัติ)
-                </small>
-              </label>
-
-              <div class="calculated-money">
-                1,000 บาท
-              </div>
-
-            </div>
-
-
-            <div class="form-actions">
-
-              <button class="outline-button">
-                ยกเลิก
-              </button>
-
-              <button class="pink-button">
-                บันทึกรายการ
-              </button>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             6. MY PRODUCT
-             ================================================= -->
-
-        <section
-          id="view-my-items"
-          class="view"
-        >
-
-          <div class="section-title">
-
-            <div>
-
-              <h2>
-                รายการของฉัน
-              </h2>
-
-              <p>
-                รายการผ่อนสินค้าและเงินยืมของคุณ
-              </p>
-
-            </div>
-
-            <button
-              class="pink-button"
-              onclick="เปิดหน้า('add-type')"
-            >
-              + เพิ่มรายการ
-            </button>
-
-          </div>
-
-
-          <div class="tabs">
-
-            <button class="tab active">
-              ผ่อนสินค้า (3)
-            </button>
-
-            <button class="tab">
-              เงินยืม (2)
-            </button>
-
-          </div>
-
-
-          <div class="item-list">
-
-
-            <div class="item-card">
-
-              <div class="item-image">
-                🛏
-              </div>
-
-              <div class="item-main">
-
-                <h3>
-                  Solomon ที่นอนพ็อกเก็ตสปริง
-                </h3>
-
-                <span>
-                  502.80 บาท/เดือน
-                </span>
-
-              </div>
-
-              <div class="item-progress">
-
-                <strong>
-                  เหลือ 4/5 เดือน
-                </strong>
-
-                <div class="progress">
-                  <span style="width:20%"></span>
-                </div>
-
-              </div>
-
-              <button
-                class="round-arrow"
-                onclick="เปิดหน้า('detail')"
-              >
-                →
-              </button>
-
-            </div>
-
-
-            <div class="item-card">
-
-              <div class="item-image">
-                🛏
-              </div>
-
-              <div class="item-main">
-
-                <h3>
-                  Tulip ผ้าปูที่นอน
-                </h3>
-
-                <span>
-                  199.00 บาท/เดือน
-                </span>
-
-              </div>
-
-              <div class="item-progress">
-
-                <strong>
-                  เหลือ 3/5 เดือน
-                </strong>
-
-                <div class="progress">
-                  <span style="width:40%"></span>
-                </div>
-
-              </div>
-
-              <button class="round-arrow">
-                →
-              </button>
-
-            </div>
-
-
-            <div class="item-card">
-
-              <div class="item-image">
-                🎒
-              </div>
-
-              <div class="item-main">
-
-                <h3>
-                  Adidas กระเป๋า
-                </h3>
-
-                <span>
-                  97.20 บาท/เดือน
-                </span>
-
-              </div>
-
-              <div class="item-progress">
-
-                <strong>
-                  เหลือ 2/5 เดือน
-                </strong>
-
-                <div class="progress">
-                  <span style="width:60%"></span>
-                </div>
-
-              </div>
-
-              <button class="round-arrow">
-                →
-              </button>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             7. MY LOANS
-             ================================================= -->
-
-        <section
-          id="view-my-loans"
-          class="view"
-        >
-
-          <div class="section-title">
-
-            <div>
-
-              <h2>
-                รายการเงินยืมของฉัน
-              </h2>
-
-              <p>
-                รายการเงินยืมทั้งหมดของคุณ
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="item-list">
-
-            <div class="item-card">
-
-              <div class="item-image blue-bg">
-                $
-              </div>
-
-              <div class="item-main">
-
-                <h3>
-                  ค่าเดินทาง
-                </h3>
-
-                <span>
-                  500.00 บาท/เดือน
-                </span>
-
-              </div>
-
-              <div class="item-progress">
-
-                <strong>
-                  เหลือ 2/3 เดือน
-                </strong>
-
-                <div class="progress">
-                  <span style="width:33%"></span>
-                </div>
-
-              </div>
-
-              <button class="round-arrow">
-                →
-              </button>
-
-            </div>
-
-
-            <div class="item-card">
-
-              <div class="item-image blue-bg">
-                $
-              </div>
-
-              <div class="item-main">
-
-                <h3>
-                  ค่าใช้จ่ายส่วนตัว
-                </h3>
-
-                <span>
-                  1,000.00 บาท/เดือน
-                </span>
-
-              </div>
-
-              <div class="item-progress">
-
-                <strong>
-                  เหลือ 5/6 เดือน
-                </strong>
-
-                <div class="progress">
-                  <span style="width:17%"></span>
-                </div>
-
-              </div>
-
-              <button class="round-arrow">
-                →
-              </button>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             8. DETAIL
-             ================================================= -->
-
-        <section
-          id="view-detail"
-          class="view"
-        >
-
-          <div class="detail-header">
-
-            <button
-              class="back-button"
-              onclick="เปิดหน้า('my-items')"
-            >
-              ← กลับ
-            </button>
-
-            <div>
-
-              <span class="tag tag-pink">
-                ผ่อนสินค้า
-              </span>
-
-              <h2>
-                Solomon ที่นอนพ็อกเก็ตสปริง
-              </h2>
-
-            </div>
-
-            <span class="status-badge">
-              ● กำลังผ่อน
-            </span>
-
-          </div>
-
-
-          <div class="detail-card">
-
-            <div class="detail-top">
-
-              <div class="detail-product-image">
-                🛏
-              </div>
-
-              <div class="detail-title">
-
-                <h3>
-                  Solomon ที่นอนพ็อกเก็ตสปริง
-                </h3>
-
-                <span class="tag tag-pink">
-                  ผ่อนสินค้า
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="detail-info-grid">
-
-              <div>
-                <small>วันที่สั่งซื้อ</small>
-                <strong>11/10/2569</strong>
-              </div>
-
-              <div>
-                <small>วันที่เริ่มผ่อน</small>
-                <strong>11/11/2569</strong>
-              </div>
-
-              <div>
-                <small>วันครบกำหนด</small>
-                <strong>มีนาคม 2570</strong>
-              </div>
-
-              <div>
-                <small>ค่างวด</small>
-                <strong>502.80 บาท</strong>
-              </div>
-
-              <div>
-                <small>จำนวนเดือน</small>
-                <strong>5 เดือน</strong>
-              </div>
-
-              <div>
-                <small>ผ่อนแล้ว</small>
-                <strong>1 เดือน</strong>
-              </div>
-
-              <div>
-                <small>เหลือ</small>
-                <strong>4 เดือน</strong>
-              </div>
-
-            </div>
-
-
-            <div class="detail-progress-header">
-
-              <strong>
-                ความคืบหน้าในการผ่อน
-              </strong>
-
-              <span>
-                20%
-              </span>
-
-            </div>
-
-            <div class="big-progress">
-              <span style="width:20%"></span>
-            </div>
-
-
-            <h3 class="payment-history-title">
-              ประวัติการจ่าย
+            <h3 class="card-title">
+              งวดที่กำลังจะถึง
             </h3>
 
-
-            <div class="table-wrapper">
-
-              <table>
-
-                <thead>
-
-                  <tr>
-                    <th>งวดที่</th>
-                    <th>เดือน</th>
-                    <th>จำนวนเงิน</th>
-                    <th>สถานะ</th>
-                    <th>วันที่จ่าย</th>
-                  </tr>
-
-                </thead>
-
-                <tbody>
-
-                  <tr>
-                    <td>1</td>
-                    <td>พ.ย. 2569</td>
-                    <td>502.80</td>
-                    <td>
-                      <span class="paid-status">
-                        จ่ายแล้ว
-                      </span>
-                    </td>
-                    <td>11/11/2569</td>
-                  </tr>
-
-                  <tr>
-                    <td>2</td>
-                    <td>ธ.ค. 2569</td>
-                    <td>502.80</td>
-                    <td>
-                      <span class="waiting-status">
-                        รอจ่าย
-                      </span>
-                    </td>
-                    <td>-</td>
-                  </tr>
-
-                  <tr>
-                    <td>3</td>
-                    <td>ม.ค. 2570</td>
-                    <td>502.80</td>
-                    <td>
-                      <span class="waiting-status">
-                        รอจ่าย
-                      </span>
-                    </td>
-                    <td>-</td>
-                  </tr>
-
-                </tbody>
-
-              </table>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             9. ADMIN DASHBOARD
-             ================================================= -->
-
-        <section
-          id="view-admin-dashboard"
-          class="view"
-        >
-
-          <div class="admin-page-title">
-
-            <div>
-
-              <span>
-                Admin Panel
-              </span>
-
-              <h2>
-                ภาพรวมทั้งหมด
-              </h2>
-
-            </div>
-
-            <button class="export-button">
-              ⇩ ส่งออก Excel
-            </button>
+            <p class="card-description">
+              รายการงวดที่ต้องชำระในช่วงถัดไป
+            </p>
 
           </div>
 
 
-          <div class="admin-stat-grid">
+          <button
+            type="button"
+            class="button button-secondary"
+          >
+            ดูทั้งหมด
+          </button>
 
-            <div class="admin-stat">
-
-              <span>
-                ยอดที่ต้องเก็บทั้งหมด
-              </span>
-
-              <strong>
-                25,000
-              </strong>
-
-              <small>
-                บาท
-              </small>
-
-            </div>
+        </div>
 
 
-            <div class="admin-stat green">
+        <div class="table-container">
 
-              <span>
-                จ่ายแล้ว
-              </span>
+          <table class="data-table">
 
-              <strong>
-                20,000
-              </strong>
+            <thead>
 
-              <small>
-                บาท
-              </small>
+              <tr>
 
-            </div>
+                <th>
+                  รหัสงวด
+                </th>
 
+                <th>
+                  ประเภทรายการ
+                </th>
 
-            <div class="admin-stat orange">
+                <th>
+                  งวดที่
+                </th>
 
-              <span>
-                ค้างชำระ
-              </span>
+                <th>
+                  วันครบกำหนด
+                </th>
 
-              <strong>
-                5,000
-              </strong>
+                <th>
+                  จำนวนเงิน
+                </th>
 
-              <small>
-                บาท
-              </small>
+                <th>
+                  สถานะ
+                </th>
 
-            </div>
+              </tr>
 
-
-            <div class="admin-stat purple">
-
-              <span>
-                จำนวนผู้ใช้
-              </span>
-
-              <strong>
-                12
-              </strong>
-
-              <small>
-                คน
-              </small>
-
-            </div>
-
-          </div>
+            </thead>
 
 
-          <div class="admin-chart-grid">
+            <tbody>
 
-            <div class="admin-panel">
+              <tr>
 
-              <h3>
-                ยอดที่ต้องเก็บรายเดือน
-              </h3>
+                <td colspan="6">
 
-              <div class="fake-chart">
+                  <div class="empty-state">
 
-                <div class="chart-column">
-                  <span style="height:80%"></span>
-                  <span style="height:60%"></span>
-                </div>
+                    <div class="empty-state-icon">
+                      📅
+                    </div>
 
-                <div class="chart-column">
-                  <span style="height:70%"></span>
-                  <span style="height:55%"></span>
-                </div>
+                    <p class="empty-state-title">
+                      ยังไม่มีข้อมูล
+                    </p>
 
-                <div class="chart-column">
-                  <span style="height:90%"></span>
-                  <span style="height:65%"></span>
-                </div>
+                    <p class="empty-state-text">
+                      ระบบจะแสดงงวดของคุณตรงนี้
+                    </p>
 
-                <div class="chart-column">
-                  <span style="height:75%"></span>
-                  <span style="height:50%"></span>
-                </div>
+                  </div>
 
-                <div class="chart-column">
-                  <span style="height:60%"></span>
-                  <span style="height:45%"></span>
-                </div>
+                </td>
 
-                <div class="chart-column">
-                  <span style="height:50%"></span>
-                  <span style="height:40%"></span>
-                </div>
+              </tr>
 
-              </div>
+            </tbody>
 
-            </div>
+          </table>
+
+        </div>
+
+      </section>
 
 
-            <div class="admin-panel">
+      <!-- =================================================
+           รายการของฉัน
+           ================================================= -->
 
-              <h3>
-                สัดส่วนรายการ
-              </h3>
+      <section class="card">
 
-              <div class="donut">
+        <div class="card-header">
 
-                <div class="donut-inner">
-                  38
-                  <small>รายการ</small>
-                </div>
+          <div>
 
-              </div>
+            <h3 class="card-title">
+              รายการของฉัน
+            </h3>
 
-              <div class="donut-legend">
-
-                <span>
-                  ● ผ่อนสินค้า 25 (66%)
-                </span>
-
-                <span>
-                  ● เงินยืม 13 (34%)
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             10. ADMIN MONTHLY
-             ================================================= -->
-
-        <section
-          id="view-admin-monthly"
-          class="view"
-        >
-
-          <div class="section-title">
-
-            <div>
-
-              <h2>
-                ตารางสรุปยอดรายเดือน
-              </h2>
-
-              <p>
-                ภาพรวมยอดการชำระเงินของระบบ
-              </p>
-
-            </div>
-
-            <button class="export-button">
-              ⇩ ส่งออก Excel
-            </button>
+            <p class="card-description">
+              รายการผ่อนสินค้าและเงินยืมของคุณ
+            </p>
 
           </div>
 
 
-          <div class="admin-panel monthly-panel">
+          <button
+            type="button"
+            class="button button-primary"
+          >
+            + เพิ่มรายการ
+          </button>
 
-            <div class="month-selector">
-
-              <select>
-
-                <option>
-                  ตุลาคม 2569
-                </option>
-
-                <option>
-                  พฤศจิกายน 2569
-                </option>
-
-                <option>
-                  ธันวาคม 2569
-                </option>
-
-              </select>
-
-            </div>
+        </div>
 
 
-            <div class="table-wrapper">
+        <div class="table-container">
 
-              <table>
+          <table class="data-table">
 
-                <thead>
+            <thead>
 
-                  <tr>
-                    <th>ลำดับ</th>
-                    <th>เดือน</th>
-                    <th>ยอดที่ต้องเก็บ (บาท)</th>
-                    <th>จ่ายแล้ว (บาท)</th>
-                    <th>ค้างชำระ (บาท)</th>
-                    <th>จำนวนรายการ</th>
-                  </tr>
+              <tr>
 
-                </thead>
+                <th>
+                  รหัสรายการ
+                </th>
 
-                <tbody>
+                <th>
+                  ประเภทรายการ
+                </th>
 
-                  <tr>
-                    <td>1</td>
-                    <td>ต.ค. 2569</td>
-                    <td>25,000</td>
-                    <td>20,000</td>
-                    <td class="danger-text">5,000</td>
-                    <td>38</td>
-                  </tr>
+                <th>
+                  รายละเอียด
+                </th>
 
-                  <tr>
-                    <td>2</td>
-                    <td>พ.ย. 2569</td>
-                    <td>22,500</td>
-                    <td>18,000</td>
-                    <td class="danger-text">4,500</td>
-                    <td>35</td>
-                  </tr>
+                <th>
+                  จำนวนเงิน
+                </th>
 
-                  <tr>
-                    <td>3</td>
-                    <td>ธ.ค. 2569</td>
-                    <td>21,800</td>
-                    <td>17,200</td>
-                    <td class="danger-text">4,600</td>
-                    <td>33</td>
-                  </tr>
+                <th>
+                  ยอดคงเหลือ
+                </th>
 
-                  <tr>
-                    <td>4</td>
-                    <td>ม.ค. 2570</td>
-                    <td>19,900</td>
-                    <td>15,000</td>
-                    <td class="danger-text">4,900</td>
-                    <td>30</td>
-                  </tr>
+                <th>
+                  สถานะ
+                </th>
 
-                  <tr>
-                    <td>5</td>
-                    <td>ก.พ. 2570</td>
-                    <td>18,700</td>
-                    <td>14,500</td>
-                    <td class="danger-text">4,200</td>
-                    <td>28</td>
-                  </tr>
+              </tr>
 
-                </tbody>
+            </thead>
 
-                <tfoot>
 
-                  <tr>
-                    <th colspan="2">
-                      รวม
-                    </th>
-                    <th>
-                      120,200
-                    </th>
-                    <th>
-                      94,900
-                    </th>
-                    <th>
-                      25,300
-                    </th>
-                    <th>
-                      184
-                    </th>
-                  </tr>
+            <tbody>
 
-                </tfoot>
+              <tr>
 
-              </table>
+                <td colspan="6">
 
-            </div>
+                  <div class="empty-state">
+
+                    <div class="empty-state-icon">
+                      📋
+                    </div>
+
+                    <p class="empty-state-title">
+                      ยังไม่มีรายการ
+                    </p>
+
+                    <p class="empty-state-text">
+                      เมื่อมีรายการ ระบบจะแสดงข้อมูลตรงนี้
+                    </p>
+
+                  </div>
+
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           ส่วนเจ้าของระบบ
+           ================================================= -->
+
+      <section class="card owner-only">
+
+        <div class="card-header">
+
+          <div>
+
+            <h3 class="card-title">
+              👑 การจัดการของเจ้าของระบบ
+            </h3>
+
+            <p class="card-description">
+              ส่วนนี้จะแสดงเฉพาะเจ้าของระบบเท่านั้น
+            </p>
 
           </div>
 
-        </section>
+        </div>
 
 
+        <div class="alert alert-warning">
 
-        <!-- =================================================
-             11. ADMIN USERS
-             ================================================= -->
+          เจ้าของระบบสามารถตรวจสอบรายการทั้งหมด
+          และเป็นผู้เดียวที่สามารถบันทึกการชำระเงินได้
 
-        <section
-          id="view-admin-users"
-          class="view"
-        >
+        </div>
 
-          <div class="section-title">
 
-            <div>
+        <div class="table-container">
 
-              <h2>
-                รายชื่อผู้ใช้
-              </h2>
-
-              <p>
-                จัดการข้อมูลผู้ใช้งานทั้งหมด
-              </p>
-
-            </div>
-
-            <button class="pink-button">
-              + เพิ่มผู้ใช้
-            </button>
-
-          </div>
+          <table class="data-table">
 
+            <thead>
 
-          <div class="search-box">
+              <tr>
 
-            <svg viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="7"></circle>
-              <path d="M16 16l5 5"></path>
-            </svg>
+                <th>
+                  รหัสงวด
+                </th>
 
-            <input
-              type="text"
-              placeholder="ค้นหาชื่อผู้ใช้..."
-            >
+                <th>
+                  ผู้ใช้
+                </th>
 
-          </div>
+                <th>
+                  ประเภทรายการ
+                </th>
 
+                <th>
+                  จำนวนเงิน
+                </th>
 
-          <div class="admin-panel">
+                <th>
+                  สถานะ
+                </th>
 
-            <div class="table-wrapper">
+                <th>
+                  การดำเนินการ
+                </th>
 
-              <table>
+              </tr>
 
-                <thead>
+            </thead>
 
-                  <tr>
-                    <th>ลำดับ</th>
-                    <th>ชื่อผู้ใช้</th>
-                    <th>ผ่อนสินค้า</th>
-                    <th>เงินยืม</th>
-                    <th>ยอดค้างชำระ (บาท)</th>
-                    <th>จัดการ</th>
-                  </tr>
 
-                </thead>
+            <tbody>
 
-                <tbody>
+              <tr>
 
-                  <tr>
-                    <td>1</td>
-                    <td>อรุณไทย</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td class="danger-text">3,950</td>
-                    <td>
-                      <button class="table-action">แก้ไข</button>
-                    </td>
-                  </tr>
+                <td>
+                  I0008
+                </td>
 
-                  <tr>
-                    <td>2</td>
-                    <td>กิตติพงษ์</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td class="danger-text">1,200</td>
-                    <td>
-                      <button class="table-action">แก้ไข</button>
-                    </td>
-                  </tr>
+                <td>
+                  ผู้ใช้ทดสอบ
+                </td>
 
-                  <tr>
-                    <td>3</td>
-                    <td>สมหญิง</td>
-                    <td>4</td>
-                    <td>0</td>
-                    <td class="danger-text">2,850</td>
-                    <td>
-                      <button class="table-action">แก้ไข</button>
-                    </td>
-                  </tr>
+                <td>
+                  เงินยืม
+                </td>
 
-                  <tr>
-                    <td>4</td>
-                    <td>นกสร</td>
-                    <td>1</td>
-                    <td>3</td>
-                    <td class="danger-text">5,000</td>
-                    <td>
-                      <button class="table-action">แก้ไข</button>
-                    </td>
-                  </tr>
+                <td>
+                  1,000 บาท
+                </td>
 
-                  <tr>
-                    <td>5</td>
-                    <td>วรพล</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td class="danger-text">1,800</td>
-                    <td>
-                      <button class="table-action">แก้ไข</button>
-                    </td>
-                  </tr>
+                <td>
 
-                </tbody>
+                  <span class="status status-waiting">
+                    รอชำระ
+                  </span>
 
-              </table>
+                </td>
 
-            </div>
+                <td>
 
-          </div>
+                  <button
+                    type="button"
+                    class="button button-success button-small"
+                    disabled
+                  >
+                    ✓ ชำระแล้ว
+                  </button>
 
-        </section>
+                </td>
 
+              </tr>
 
+            </tbody>
 
-        <!-- =================================================
-             PAYMENT HISTORY
-             ================================================= -->
+          </table>
 
-        <section
-          id="view-payment-history"
-          class="view"
-        >
+        </div>
 
-          <div class="section-title">
+      </section>
 
-            <div>
 
-              <h2>
-                ประวัติการชำระเงิน
-              </h2>
-
-              <p>
-                รายการชำระเงินของคุณ
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="admin-panel">
-
-            <div class="table-wrapper">
-
-              <table>
-
-                <thead>
-
-                  <tr>
-                    <th>วันที่</th>
-                    <th>รายการ</th>
-                    <th>งวด</th>
-                    <th>จำนวนเงิน</th>
-                    <th>สถานะ</th>
-                  </tr>
-
-                </thead>
-
-                <tbody>
-
-                  <tr>
-                    <td>11/11/2569</td>
-                    <td>Solomon ที่นอน</td>
-                    <td>1/5</td>
-                    <td>502.80</td>
-                    <td>
-                      <span class="paid-status">
-                        จ่ายแล้ว
-                      </span>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>10/10/2569</td>
-                    <td>ค่าเดินทาง</td>
-                    <td>1/3</td>
-                    <td>500.00</td>
-                    <td>
-                      <span class="paid-status">
-                        จ่ายแล้ว
-                      </span>
-                    </td>
-                  </tr>
-
-                </tbody>
-
-              </table>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             NOTIFICATIONS
-             ================================================= -->
-
-        <section
-          id="view-notifications"
-          class="view"
-        >
-
-          <div class="section-title">
-
-            <div>
-
-              <h2>
-                แจ้งเตือน
-              </h2>
-
-              <p>
-                การแจ้งเตือนเกี่ยวกับรายการของคุณ
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="notification-card">
-
-            <div class="notification-icon">
-              !
-            </div>
-
-            <div>
-
-              <strong>
-                มีงวดใกล้ครบกำหนด
-              </strong>
-
-              <p>
-                Solomon ที่นอนพ็อกเก็ตสปริง
-                จะครบกำหนดชำระในวันที่ 1 พฤศจิกายน 2569
-              </p>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SETTINGS
-             ================================================= -->
-
-        <section
-          id="view-settings"
-          class="view"
-        >
-
-          <div class="section-title">
-
-            <div>
-
-              <h2>
-                ตั้งค่าบัญชี
-              </h2>
-
-              <p>
-                ข้อมูลบัญชีผู้ใช้งาน
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="form-panel">
-
-            <div class="form-field">
-
-              <label>
-                ชื่อผู้ใช้
-              </label>
-
-              <input
-                type="text"
-                value="อรุณไทย"
-              >
-
-            </div>
-
-
-            <div class="form-field">
-
-              <label>
-                อีเมล
-              </label>
-
-              <input
-                type="email"
-                value="example@gmail.com"
-              >
-
-            </div>
-
-
-            <div class="form-field">
-
-              <label>
-                เบอร์โทรศัพท์
-              </label>
-
-              <input
-                type="tel"
-                placeholder="กรอกเบอร์โทรศัพท์"
-              >
-
-            </div>
-
-
-            <div class="form-actions">
-
-              <button class="pink-button">
-                บันทึกการเปลี่ยนแปลง
-              </button>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-      </main>
-
-    </div>
+    </main>
 
   </div>
 
-</div>
 
+  <!-- =====================================================
+       ส่วนท้าย
+       ===================================================== -->
 
+  <footer class="footer">
 
-<!-- =========================================================
-     JAVASCRIPT สำหรับเปลี่ยนหน้า
-     ตอนนี้ยังเป็นข้อมูลตัวอย่าง
-     ขั้นต่อไปจะเชื่อม Apps Script /exec
-     ========================================================= -->
+    ระบบจัดการผ่อนสินค้าและเงินยืม
 
-<script>
+    <br>
 
-  const pages = [
-    'dashboard',
-    'add-type',
-    'product-form',
-    'loan-form',
-    'my-items',
-    'my-loans',
-    'detail',
-    'admin-dashboard',
-    'admin-monthly',
-    'admin-users',
-    'payment-history',
-    'notifications',
-    'settings'
-  ];
+    ระบบจะตรวจสอบสิทธิ์ผู้ใช้งานก่อนแสดงข้อมูล
 
-
-  function เปิดหน้า(pageName) {
-
-    document
-      .querySelectorAll('.view')
-      .forEach(view => {
-
-        view.classList.remove('active-view');
-
-      });
-
-
-    const target =
-      document.getElementById(
-        'view-' + pageName
-      );
-
-
-    if (target) {
-
-      target.classList.add('active-view');
-
-    }
-
-
-    document
-      .querySelectorAll('.sidebar-item')
-      .forEach(item => {
-
-        item.classList.remove('active');
-
-      });
-
-
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-
-  }
-
-
-  function เข้าสู่ระบบ() {
-
-    const name =
-      document.getElementById('loginName').value.trim();
-
-
-    /*
-      ตอนนี้เป็นการทดสอบหน้าตาเท่านั้น
-
-      ขั้นต่อไปจะเปลี่ยนส่วนนี้ให้เรียก
-      Google Apps Script /exec
-
-      แล้วตรวจสอบสิทธิ์จริงจากระบบ
-    */
-
-
-    document
-      .getElementById('page-login')
-      .classList.add('hidden');
-
-
-    document
-      .getElementById('mainSystem')
-      .classList.remove('hidden');
-
-
-    const displayName =
-      name || 'อรุณไทย';
-
-
-    document
-      .getElementById('headerUserName')
-      .textContent =
-      displayName;
-
-
-    document
-      .getElementById('headerUserRole')
-      .textContent =
-      'ผู้ใช้';
-
-
-    เปิดหน้า('dashboard');
-
-  }
-
-
-  function ออกจากระบบ() {
-
-    document
-      .getElementById('mainSystem')
-      .classList.add('hidden');
-
-
-    document
-      .getElementById('page-login')
-      .classList.remove('hidden');
-
-  }
-
-
-  /*
-    เปิดหน้าเลือกประเภทเมื่อกด + เพิ่มรายการ
-  */
-
-  document
-    .querySelectorAll('.pink-button')
-    .forEach(button => {
-
-      if (
-        button.textContent.includes('เพิ่มรายการ')
-      ) {
-
-        button.addEventListener(
-          'click',
-          () => เปิดหน้า('add-type')
-        );
-
-      }
-
-    });
-
-
-</script>
+  </footer>
 
 
 </body>
+
 </html>
