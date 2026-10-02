@@ -10,27 +10,36 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>ระบบจัดการผ่อนสินค้าและเงินยืม</title>
+  <title>
+    ระบบจัดการผ่อนสินค้าและเงินยืม
+  </title>
 
-  <!-- เชื่อมไฟล์รูปแบบเว็บไซต์ -->
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
 
 </head>
 
+
 <body>
 
+
   <!-- =====================================================
-       ส่วนหัวเว็บไซต์
+       ส่วนหัวระบบ
        ===================================================== -->
 
   <header class="header">
 
     <div class="header-container">
 
+
+      <!-- โลโก้และชื่อระบบ -->
+
       <div class="logo-area">
 
         <div class="logo">
-          ผ
+          💗
         </div>
 
         <div class="logo-text">
@@ -49,22 +58,36 @@
 
 
       <!-- ข้อมูลผู้ใช้งาน -->
+
       <div class="user-area">
+
+        <div class="notification">
+          🔔
+        </div>
 
         <div class="user-info">
 
-          <p class="user-name">
+          <p
+            class="user-name"
+            id="ชื่อผู้ใช้"
+          >
             กำลังตรวจสอบผู้ใช้งาน
           </p>
 
-          <p class="user-role">
+          <p
+            class="user-role"
+            id="บทบาทผู้ใช้"
+          >
             กรุณารอสักครู่
           </p>
 
         </div>
 
-        <div class="user-avatar">
-          ผ
+        <div
+          class="user-avatar"
+          id="รูปผู้ใช้"
+        >
+          👩🏻
         </div>
 
       </div>
@@ -72,6 +95,7 @@
     </div>
 
   </header>
+
 
 
   <!-- =====================================================
@@ -87,6 +111,7 @@
 
     <aside class="sidebar">
 
+
       <div class="sidebar-title">
         เมนูหลัก
       </div>
@@ -94,9 +119,11 @@
 
       <nav class="menu">
 
-        <a
-          href="#"
+
+        <button
+          type="button"
           class="menu-item active"
+          data-page="หน้าแรก"
         >
 
           <span class="menu-icon">
@@ -107,28 +134,50 @@
             หน้าแรก
           </span>
 
-        </a>
+        </button>
 
 
-        <a
-          href="#"
+
+        <button
+          type="button"
           class="menu-item"
+          data-page="รายการของฉัน"
         >
 
           <span class="menu-icon">
-            📦
+            🛍️
           </span>
 
           <span>
-            รายการผ่อน
+            รายการของฉัน
           </span>
 
-        </a>
+        </button>
 
 
-        <a
-          href="#"
+
+        <button
+          type="button"
           class="menu-item"
+          data-page="ผ่อนสินค้า"
+        >
+
+          <span class="menu-icon">
+            🛒
+          </span>
+
+          <span>
+            ผ่อนสินค้า
+          </span>
+
+        </button>
+
+
+
+        <button
+          type="button"
+          class="menu-item"
+          data-page="เงินยืม"
         >
 
           <span class="menu-icon">
@@ -136,31 +185,17 @@
           </span>
 
           <span>
-            รายการเงินยืม
+            เงินยืม
           </span>
 
-        </a>
+        </button>
 
 
-        <a
-          href="#"
+
+        <button
+          type="button"
           class="menu-item"
-        >
-
-          <span class="menu-icon">
-            📅
-          </span>
-
-          <span>
-            งวดชำระ
-          </span>
-
-        </a>
-
-
-        <a
-          href="#"
-          class="menu-item"
+          data-page="ประวัติการชำระเงิน"
         >
 
           <span class="menu-icon">
@@ -168,57 +203,86 @@
           </span>
 
           <span>
-            การชำระเงิน
+            ประวัติการชำระเงิน
           </span>
 
-        </a>
+        </button>
 
 
-        <a
-          href="#"
+
+        <button
+          type="button"
           class="menu-item"
+          data-page="แจ้งเตือน"
         >
 
           <span class="menu-icon">
-            👤
+            🔔
           </span>
 
           <span>
-            ข้อมูลของฉัน
+            แจ้งเตือน
           </span>
 
-        </a>
+        </button>
+
+
+
+        <button
+          type="button"
+          class="menu-item"
+          data-page="ตั้งค่าบัญชี"
+        >
+
+          <span class="menu-icon">
+            ⚙️
+          </span>
+
+          <span>
+            ตั้งค่าบัญชี
+          </span>
+
+        </button>
+
 
       </nav>
 
 
+
       <!-- เมนูเจ้าของระบบ -->
-      <div class="sidebar-title" style="margin-top: 25px;">
+
+      <div
+        class="sidebar-title owner-only"
+      >
         เจ้าของระบบ
       </div>
 
 
-      <nav class="menu">
+      <nav class="menu owner-only">
 
-        <a
-          href="#"
-          class="menu-item owner-only"
+
+        <button
+          type="button"
+          class="menu-item"
+          data-page="ภาพรวมทั้งหมด"
         >
 
           <span class="menu-icon">
-            👑
+            📊
           </span>
 
           <span>
-            จัดการระบบ
+            ภาพรวมทั้งหมด
           </span>
 
-        </a>
+        </button>
 
 
-        <a
-          href="#"
-          class="menu-item owner-only"
+
+        <button
+          type="button"
+          class="menu-item"
+          data-page="ผู้ใช้งานทั้งหมด"
         >
 
           <span class="menu-icon">
@@ -229,27 +293,63 @@
             ผู้ใช้งานทั้งหมด
           </span>
 
-        </a>
+        </button>
 
 
-        <a
-          href="#"
-          class="menu-item owner-only"
+
+        <button
+          type="button"
+          class="menu-item"
+          data-page="จัดการการชำระเงิน"
         >
 
           <span class="menu-icon">
-            📊
+            💵
+          </span>
+
+          <span>
+            จัดการการชำระเงิน
+          </span>
+
+        </button>
+
+
+
+        <button
+          type="button"
+          class="menu-item"
+          data-page="รายงาน"
+        >
+
+          <span class="menu-icon">
+            📈
           </span>
 
           <span>
             รายงาน
           </span>
 
-        </a>
+        </button>
+
 
       </nav>
 
+
+      <div class="sidebar-bottom">
+
+        <button
+          type="button"
+          class="logout-button"
+          id="ปุ่มออกจากระบบ"
+        >
+          🚪 ออกจากระบบ
+        </button>
+
+      </div>
+
+
     </aside>
+
 
 
     <!-- ===================================================
@@ -259,134 +359,251 @@
     <main class="main">
 
 
-      <!-- หัวข้อหน้า -->
+      <!-- ================================================
+           ส่วนต้อนรับ
+           ================================================ -->
 
-      <section class="page-header">
+      <section class="welcome-section">
 
-        <h2>
-          หน้าแรก
-        </h2>
 
-        <p>
-          ภาพรวมรายการผ่อนและเงินยืมของคุณ
-        </p>
+        <div class="welcome-text">
+
+          <p class="welcome-small">
+            สวัสดีค่ะ 👋
+          </p>
+
+          <h2 id="ข้อความต้อนรับ">
+            ยินดีต้อนรับกลับมา
+          </h2>
+
+          <p>
+            นี่คือภาพรวมรายการผ่อนสินค้าและเงินยืมของคุณ
+          </p>
+
+        </div>
+
+
+        <!-- ภาพผู้หญิงตกแต่ง -->
+
+        <div class="welcome-character">
+
+          <div class="character-circle">
+
+            <div class="character">
+              👩🏻
+            </div>
+
+          </div>
+
+          <div class="heart heart-1">
+            💗
+          </div>
+
+          <div class="heart heart-2">
+            💕
+          </div>
+
+        </div>
+
 
       </section>
 
 
-      <!-- =================================================
-           แจ้งสถานะระบบ
-           ================================================= -->
 
-      <div class="alert alert-info">
+      <!-- ================================================
+           แถบยอดที่ต้องจ่าย
+           ================================================ -->
 
-        ระบบกำลังเชื่อมต่อกับข้อมูล
-        กรุณารอสักครู่
-
-      </div>
+      <section class="payment-highlight">
 
 
-      <!-- =================================================
-           การ์ดสรุปข้อมูล
-           ================================================= -->
+        <div class="payment-icon">
+          💼
+        </div>
+
+
+        <div class="payment-content">
+
+          <p>
+            ยอดที่ต้องจ่ายเดือนนี้
+          </p>
+
+          <strong id="ยอดที่ต้องจ่ายเดือนนี้">
+            0 บาท
+          </strong>
+
+          <span>
+            ตรวจสอบงวดที่ใกล้ครบกำหนด
+          </span>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="button button-primary"
+          id="ปุ่มดูงวดเดือนนี้"
+        >
+          ดูรายละเอียด →
+        </button>
+
+
+      </section>
+
+
+
+      <!-- ================================================
+           การ์ดสรุป
+           ================================================ -->
 
       <section class="summary-grid">
 
 
-        <!-- รายการผ่อน -->
+        <!-- ผ่อนสินค้า -->
 
-        <div class="summary-card">
+        <article class="summary-card summary-card-pink">
 
-          <p class="summary-label">
-            รายการผ่อน
-          </p>
+          <div class="summary-card-icon">
+            🛍️
+          </div>
 
-          <p class="summary-value">
-            0
-          </p>
+          <div>
 
-          <p class="summary-detail">
-            รายการ
-          </p>
+            <p class="summary-label">
+              ผ่อนสินค้า
+            </p>
 
-        </div>
+            <strong
+              class="summary-value"
+              id="จำนวนรายการผ่อน"
+            >
+              0
+            </strong>
+
+            <span>
+              รายการ
+            </span>
+
+          </div>
+
+        </article>
+
 
 
         <!-- เงินยืม -->
 
-        <div class="summary-card">
+        <article class="summary-card summary-card-blue">
 
-          <p class="summary-label">
-            รายการเงินยืม
-          </p>
+          <div class="summary-card-icon">
+            💰
+          </div>
 
-          <p class="summary-value">
-            0
-          </p>
+          <div>
 
-          <p class="summary-detail">
-            รายการ
-          </p>
+            <p class="summary-label">
+              เงินยืม
+            </p>
 
-        </div>
+            <strong
+              class="summary-value"
+              id="จำนวนรายการเงินยืม"
+            >
+              0
+            </strong>
+
+            <span>
+              รายการ
+            </span>
+
+          </div>
+
+        </article>
 
 
-        <!-- งวดที่รอชำระ -->
 
-        <div class="summary-card">
+        <!-- งวดรอชำระ -->
 
-          <p class="summary-label">
-            งวดที่รอชำระ
-          </p>
+        <article class="summary-card summary-card-yellow">
 
-          <p class="summary-value">
-            0
-          </p>
+          <div class="summary-card-icon">
+            📅
+          </div>
 
-          <p class="summary-detail">
-            งวด
-          </p>
+          <div>
 
-        </div>
+            <p class="summary-label">
+              งวดรอชำระ
+            </p>
+
+            <strong
+              class="summary-value"
+              id="จำนวนงวดรอชำระ"
+            >
+              0
+            </strong>
+
+            <span>
+              งวด
+            </span>
+
+          </div>
+
+        </article>
+
 
 
         <!-- ยอดคงเหลือ -->
 
-        <div class="summary-card">
+        <article class="summary-card summary-card-purple">
 
-          <p class="summary-label">
-            ยอดคงเหลือ
-          </p>
+          <div class="summary-card-icon">
+            💵
+          </div>
 
-          <p class="summary-value">
-            0 บาท
-          </p>
+          <div>
 
-          <p class="summary-detail">
-            ยอดที่ยังต้องชำระ
-          </p>
+            <p class="summary-label">
+              ยอดคงเหลือ
+            </p>
 
-        </div>
+            <strong
+              class="summary-value"
+              id="ยอดคงเหลือ"
+            >
+              0 บาท
+            </strong>
+
+            <span>
+              ยอดที่ยังต้องชำระ
+            </span>
+
+          </div>
+
+        </article>
+
 
       </section>
 
 
-      <!-- =================================================
-           งวดที่กำลังจะถึง
-           ================================================= -->
+
+      <!-- ================================================
+           รายการใกล้ครบกำหนด
+           ================================================ -->
 
       <section class="card">
 
+
         <div class="card-header">
+
 
           <div>
 
             <h3 class="card-title">
-              งวดที่กำลังจะถึง
+              รายการใกล้ครบกำหนด
             </h3>
 
             <p class="card-description">
-              รายการงวดที่ต้องชำระในช่วงถัดไป
+              รายการที่กำลังจะถึงกำหนดชำระ
             </p>
 
           </div>
@@ -394,12 +611,15 @@
 
           <button
             type="button"
-            class="button button-secondary"
+            class="text-button"
+            id="ปุ่มดูทั้งหมด"
           >
-            ดูทั้งหมด
+            ดูทั้งหมด →
           </button>
 
+
         </div>
+
 
 
         <div class="table-container">
@@ -411,27 +631,23 @@
               <tr>
 
                 <th>
-                  รหัสงวด
+                  รายการ
                 </th>
 
                 <th>
-                  ประเภทรายการ
+                  ประเภท
                 </th>
 
                 <th>
-                  งวดที่
+                  ค่างวด
+                </th>
+
+                <th>
+                  เหลือ
                 </th>
 
                 <th>
                   วันครบกำหนด
-                </th>
-
-                <th>
-                  จำนวนเงิน
-                </th>
-
-                <th>
-                  สถานะ
                 </th>
 
               </tr>
@@ -439,11 +655,11 @@
             </thead>
 
 
-            <tbody>
+            <tbody id="รายการใกล้ครบกำหนด">
 
               <tr>
 
-                <td colspan="6">
+                <td colspan="5">
 
                   <div class="empty-state">
 
@@ -452,11 +668,11 @@
                     </div>
 
                     <p class="empty-state-title">
-                      ยังไม่มีข้อมูล
+                      กำลังโหลดข้อมูล
                     </p>
 
                     <p class="empty-state-text">
-                      ระบบจะแสดงงวดของคุณตรงนี้
+                      ระบบกำลังตรวจสอบรายการของคุณ
                     </p>
 
                   </div>
@@ -471,16 +687,20 @@
 
         </div>
 
+
       </section>
 
 
-      <!-- =================================================
+
+      <!-- ================================================
            รายการของฉัน
-           ================================================= -->
+           ================================================ -->
 
       <section class="card">
 
+
         <div class="card-header">
+
 
           <div>
 
@@ -498,97 +718,170 @@
           <button
             type="button"
             class="button button-primary"
+            id="ปุ่มเพิ่มรายการ"
           >
-            + เพิ่มรายการ
+            ＋ เพิ่มรายการ
+          </button>
+
+
+        </div>
+
+
+
+        <!-- แท็บประเภท -->
+
+        <div class="tabs">
+
+          <button
+            type="button"
+            class="tab active"
+            data-type="ผ่อนสินค้า"
+          >
+            ผ่อนสินค้า
+            <span id="จำนวนผ่อนในแท็บ">
+              (0)
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="tab"
+            data-type="เงินยืม"
+          >
+            เงินยืม
+            <span id="จำนวนเงินยืมในแท็บ">
+              (0)
+            </span>
           </button>
 
         </div>
 
 
-        <div class="table-container">
 
-          <table class="data-table">
-
-            <thead>
-
-              <tr>
-
-                <th>
-                  รหัสรายการ
-                </th>
-
-                <th>
-                  ประเภทรายการ
-                </th>
-
-                <th>
-                  รายละเอียด
-                </th>
-
-                <th>
-                  จำนวนเงิน
-                </th>
-
-                <th>
-                  ยอดคงเหลือ
-                </th>
-
-                <th>
-                  สถานะ
-                </th>
-
-              </tr>
-
-            </thead>
+        <div
+          class="item-list"
+          id="รายการของฉัน"
+        >
 
 
-            <tbody>
+          <!-- รายการตัวอย่าง -->
 
-              <tr>
+          <article class="item-card">
 
-                <td colspan="6">
 
-                  <div class="empty-state">
+            <div class="item-image">
+              🛏️
+            </div>
 
-                    <div class="empty-state-icon">
-                      📋
-                    </div>
 
-                    <p class="empty-state-title">
-                      ยังไม่มีรายการ
-                    </p>
+            <div class="item-information">
 
-                    <p class="empty-state-text">
-                      เมื่อมีรายการ ระบบจะแสดงข้อมูลตรงนี้
-                    </p>
+              <h4>
+                รายการของฉัน
+              </h4>
 
-                  </div>
+              <p>
+                กำลังโหลดข้อมูล
+              </p>
 
-                </td>
+              <span class="item-price">
+                0 บาท / เดือน
+              </span>
 
-              </tr>
+            </div>
 
-            </tbody>
 
-          </table>
+            <div class="item-progress">
+
+              <p>
+                เหลือ 0/0 งวด
+              </p>
+
+              <div class="progress-bar">
+
+                <div
+                  class="progress-value"
+                  style="width: 0%;"
+                ></div>
+
+              </div>
+
+            </div>
+
+
+            <button
+              type="button"
+              class="round-button"
+            >
+              →
+            </button>
+
+
+          </article>
+
 
         </div>
+
 
       </section>
 
 
-      <!-- =================================================
-           ส่วนเจ้าของระบบ
-           ================================================= -->
 
-      <section class="card owner-only">
+      <!-- ================================================
+           ปุ่มเพิ่มรายการ
+           ================================================ -->
+
+      <section class="add-section">
+
+
+        <div class="add-section-character">
+          👩🏻‍💼
+        </div>
+
+
+        <div class="add-section-text">
+
+          <h3>
+            มีรายการใหม่หรือเปล่าคะ? 💕
+          </h3>
+
+          <p>
+            เพิ่มรายการผ่อนสินค้าหรือเงินยืมของคุณได้เลย
+          </p>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="button button-primary"
+          id="ปุ่มเพิ่มรายการด้านล่าง"
+        >
+          ＋ เพิ่มรายการ
+        </button>
+
+
+      </section>
+
+
+
+      <!-- ================================================
+           ส่วนเจ้าของระบบ
+           ================================================ -->
+
+      <section
+        class="card owner-only"
+        id="ส่วนเจ้าของระบบ"
+      >
+
 
         <div class="card-header">
+
 
           <div>
 
             <h3 class="card-title">
-              👑 การจัดการของเจ้าของระบบ
+              👑 ภาพรวมเจ้าของระบบ
             </h3>
 
             <p class="card-description">
@@ -597,108 +890,102 @@
 
           </div>
 
+
+          <span class="owner-badge">
+            เจ้าของระบบ
+          </span>
+
+
         </div>
 
 
-        <div class="alert alert-warning">
 
-          เจ้าของระบบสามารถตรวจสอบรายการทั้งหมด
-          และเป็นผู้เดียวที่สามารถบันทึกการชำระเงินได้
+        <div class="admin-summary-grid">
+
+
+          <div class="admin-summary-card">
+
+            <span>
+              ผู้ใช้งานทั้งหมด
+            </span>
+
+            <strong id="จำนวนผู้ใช้ทั้งหมด">
+              0
+            </strong>
+
+            <small>
+              คน
+            </small>
+
+          </div>
+
+
+
+          <div class="admin-summary-card">
+
+            <span>
+              รายการทั้งหมด
+            </span>
+
+            <strong id="จำนวนรายการทั้งหมด">
+              0
+            </strong>
+
+            <small>
+              รายการ
+            </small>
+
+          </div>
+
+
+
+          <div class="admin-summary-card">
+
+            <span>
+              ยอดที่เก็บแล้ว
+            </span>
+
+            <strong id="ยอดที่เก็บแล้ว">
+              0 บาท
+            </strong>
+
+          </div>
+
+
+
+          <div class="admin-summary-card">
+
+            <span>
+              ยอดค้างชำระ
+            </span>
+
+            <strong id="ยอดค้างชำระ">
+              0 บาท
+            </strong>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="admin-note">
+
+          🔐
+          เจ้าของระบบเป็นผู้เดียวที่สามารถบันทึกการชำระเงิน
 
         </div>
 
-
-        <div class="table-container">
-
-          <table class="data-table">
-
-            <thead>
-
-              <tr>
-
-                <th>
-                  รหัสงวด
-                </th>
-
-                <th>
-                  ผู้ใช้
-                </th>
-
-                <th>
-                  ประเภทรายการ
-                </th>
-
-                <th>
-                  จำนวนเงิน
-                </th>
-
-                <th>
-                  สถานะ
-                </th>
-
-                <th>
-                  การดำเนินการ
-                </th>
-
-              </tr>
-
-            </thead>
-
-
-            <tbody>
-
-              <tr>
-
-                <td>
-                  I0008
-                </td>
-
-                <td>
-                  ผู้ใช้ทดสอบ
-                </td>
-
-                <td>
-                  เงินยืม
-                </td>
-
-                <td>
-                  1,000 บาท
-                </td>
-
-                <td>
-
-                  <span class="status status-waiting">
-                    รอชำระ
-                  </span>
-
-                </td>
-
-                <td>
-
-                  <button
-                    type="button"
-                    class="button button-success button-small"
-                    disabled
-                  >
-                    ✓ ชำระแล้ว
-                  </button>
-
-                </td>
-
-              </tr>
-
-            </tbody>
-
-          </table>
-
-        </div>
 
       </section>
 
 
     </main>
 
+
   </div>
+
 
 
   <!-- =====================================================
@@ -707,13 +994,16 @@
 
   <footer class="footer">
 
-    ระบบจัดการผ่อนสินค้าและเงินยืม
+    <p>
+      ระบบจัดการผ่อนสินค้าและเงินยืม
+    </p>
 
-    <br>
-
-    ระบบจะตรวจสอบสิทธิ์ผู้ใช้งานก่อนแสดงข้อมูล
+    <p>
+      ระบบจะตรวจสอบสิทธิ์ผู้ใช้งานก่อนแสดงข้อมูล
+    </p>
 
   </footer>
+
 
 
 </body>
