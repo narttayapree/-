@@ -715,6 +715,107 @@
 
   </footer>
 
+  <script>
+/* =====================================================
+   ระบบจัดการผ่อนสินค้าและเงินยืม
+   เชื่อมต่อ Google Apps Script
+   ===================================================== */
+
+const URL_APPS_SCRIPT =
+  'https://script.google.com/macros/s/AKfycbypnznOawqL85P9whZD-Lpg_gecB9coFEQoMm52dl_3YcdeSg5T9RN4fbtm2OgbaXvThA/exec';
+
+
+/* =====================================================
+   ฟังก์ชันเรียก Apps Script
+   ===================================================== */
+
+async function เรียกAppsScript(การทำงาน, พารามิเตอร์ = {}) {
+
+  const query = new URLSearchParams();
+
+  query.append('การทำงาน', การทำงาน);
+
+  Object.keys(พารามิเตอร์).forEach(ชื่อ => {
+    query.append(
+      ชื่อ,
+      พารามิเตอร์[ชื่อ]
+    );
+  });
+
+  const url =
+    URL_APPS_SCRIPT +
+    '?' +
+    query.toString();
+
+  const response =
+    await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(
+      'ไม่สามารถเชื่อมต่อระบบได้'
+    );
+  }
+
+  return await response.json();
+}
+
+
+/* =====================================================
+   ทดสอบการเชื่อมต่อ
+   ===================================================== */
+
+async function ทดสอบการเชื่อมต่อระบบ() {
+
+  try {
+
+    const ผลลัพธ์ =
+      await เรียกAppsScript('');
+
+    console.log(
+      'ผลการเชื่อมต่อ Apps Script:',
+      ผลลัพธ์
+    );
+
+    return ผลลัพธ์;
+
+  } catch (error) {
+
+    console.error(
+      'เกิดข้อผิดพลาด:',
+      error
+    );
+
+    return {
+      สำเร็จ: false,
+      ข้อความ: error.message
+    };
+  }
+}
+
+
+/* =====================================================
+   เมื่อเปิดหน้าเว็บ
+   ===================================================== */
+
+document.addEventListener(
+  'DOMContentLoaded',
+  async function() {
+
+    console.log(
+      'กำลังเชื่อมต่อระบบ...'
+    );
+
+    const ผลลัพธ์ =
+      await ทดสอบการเชื่อมต่อระบบ();
+
+    console.log(
+      ผลลัพธ์
+    );
+
+  }
+);
+
+</script>
 
 </body>
 
