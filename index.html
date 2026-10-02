@@ -725,38 +725,102 @@ const URL_APPS_SCRIPT =
   'https://script.google.com/macros/s/AKfycbypnznOawqL85P9whZD-Lpg_gecB9coFEQoMm52dl_3YcdeSg5T9RN4fbtm2OgbaXvThA/exec';
 
 
-/* =====================================================
-   ฟังก์ชันเรียก Apps Script
-   ===================================================== */
+function เรียกAppsScript(การทำงาน, พารามิเตอร์ = {}) {
 
-async function เรียกAppsScript(การทำงาน, พารามิเตอร์ = {}) {
+  return new Promise((resolve, reject) => {
 
-  const query = new URLSearchParams();
+    // สร้างชื่อ callback ที่ไม่ซ้ำกัน
+    const ชื่อCallback =
+      'ผลลัพธ์AppsScript_' +
+      Date.now() +
+      '_' +
+      Math.floor(Math.random() * 100000);
 
-  query.append('การทำงาน', การทำงาน);
+    // สร้างฟังก์ชันรับผลลัพธ์
+    window[ชื่อCallback] =
+      function(ข้อมูล) {
 
-  Object.keys(พารามิเตอร์).forEach(ชื่อ => {
+        // ลบฟังก์ชันออกหลังใช้งาน
+        delete window[ชื่อCallback];
+
+        // ลบ script tag
+        const script =
+          document.getElementById(
+            ชื่อCallback
+          );
+
+        if (script) {
+          script.remove();
+        }
+
+        // ส่งข้อมูลกลับ
+        resolve(ข้อมูล);
+      };
+
+    // สร้าง query string
+    const query =
+      new URLSearchParams();
+
     query.append(
-      ชื่อ,
-      พารามิเตอร์[ชื่อ]
+      'การทำงาน',
+      การทำงาน
     );
+
+    // เพิ่มพารามิเตอร์อื่น
+    Object.keys(พารามิเตอร์).forEach(
+      ชื่อ => {
+
+        query.append(
+          ชื่อ,
+          พารามิเตอร์[ชื่อ]
+        );
+
+      }
+    );
+
+    // เพิ่ม callback
+    query.append(
+      'callback',
+      ชื่อCallback
+    );
+
+    // สร้าง URL
+    const url =
+      URL_APPS_SCRIPT +
+      '?' +
+      query.toString();
+
+    // สร้าง script tag
+    const script =
+      document.createElement('script');
+
+    script.id =
+      ชื่อCallback;
+
+    script.src =
+      url;
+
+    // ถ้าโหลดไม่ได้
+    script.onerror =
+      function() {
+
+        delete window[ชื่อCallback];
+
+        script.remove();
+
+        reject(
+          new Error(
+            'ไม่สามารถเชื่อมต่อระบบได้'
+          )
+        );
+
+      };
+
+    // เพิ่มเข้าเว็บ
+    document.body.appendChild(script);
+
   });
 
-  const url =
-    URL_APPS_SCRIPT +
-    '?' +
-    query.toString();
-
-  const response =
-    await fetch(url);
-
-  if (!response.ok) {
-    throw new Error(
-      'ไม่สามารถเชื่อมต่อระบบได้'
-    );
-  }
-
-  return await response.json();
 }
 
 
